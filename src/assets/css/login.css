@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+html {
+  font-size: calc(100vw / 7.2);
+}
+.current1 {
+  background-image: linear-gradient(90deg, #f10000, #ff2000 73%, #ff4f18);
+}
+.active1 {
+  background-image: linear-gradient(90deg, #fab3b3, #ffbcb3 73%, #ffcaba);
+}
+.text-color {
+  color: #e2231a;
+}
+.login-wrapper .back-rej {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0;
+  padding: 0.2rem 0.4rem 0 0.4rem;
+}
+.login-wrapper .back-rej .pic {
+  margin-right: 1.8rem;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(../img/login-img/left.png) no-repeat;
+  background-size: 0.4rem 0.4rem;
+}
+.login-wrapper .back-rej .rej {
+  font-size: 0.32rem;
+}
+.login-wrapper .login {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.4rem 0.5rem 0 0.5rem;
+}
+.login-wrapper .login .top .tel-phone {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.2rem 0;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #efefef;
+}
+.login-wrapper .login .top .tel-phone p {
+  margin-left: 0.2rem;
+  font-size: 0.3rem;
+  color: #000;
+}
+.login-wrapper .login .top .tel-phone .down {
+  display: inline-block;
+  margin-left: 0.2rem;
+  width: 0.32rem;
+  height: 0.16rem;
+  background: url(../img/login-img/down.png) no-repeat;
+  background-size: 0.32rem 0.16rem;
+}
+.login-wrapper .login .top .tel-phone .ipt {
+  width: 80%;
+  position: relative;
+}
+.login-wrapper .login .top .tel-phone .ipt input {
+  font-size: 0.3rem;
+  width: 100%;
+  margin-left: 0.2rem;
+  border: 0;
+  outline: 0;
+}
+.login-wrapper .login .top .tel-phone .ipt input::placeholder {
+  color: #848689;
+}
+.login-wrapper .login .top .tel-phone .ipt .cancel {
+  opacity: 0;
+  position: absolute;
+  right: 0.2rem;
+  top: 0;
+  width: 0.24rem;
+}
+.login-wrapper .login .top .confirm {
+  margin-bottom: 0.4rem;
+  position: relative;
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #efefef;
+}
+.login-wrapper .login .top .confirm input {
+  font-size: 0.24rem;
+  outline: 0;
+  border: 0;
+}
+.login-wrapper .login .top .confirm input::placeholder {
+  font-size: 0.3rem;
+  color: #848689;
+}
+.login-wrapper .login .top .confirm .cancel {
+  opacity: 0;
+  position: absolute;
+  left: 3.3rem;
+  top: 0.32rem;
+  width: 0.24rem;
+}
+.login-wrapper .login .top .confirm .get {
+  margin: 0.2rem 0.4rem 0 0;
+  padding-left: 0.4rem;
+  font-size: 0.3rem;
+  color: #848689;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  border-left: 1px solid #ccc;
+}
+.login-wrapper .login .register-next {
+  display: none;
+}
+.login-wrapper .login .register-next .tel-phone .ipt {
+  width: 100%;
+}
+.login-wrapper .login .register-next .tel-phone .ipt input {
+  width: 100%;
+}
+.login-wrapper .login .register-next .confirm {
+  position: relative;
+}
+.login-wrapper .login .register-next .confirm input {
+  margin-left: 0.2rem;
+}
+.login-wrapper .login .register-next .confirm .eyes {
+  position: absolute;
+  left: 3.2rem;
+  top: 0.2rem;
+  width: 0.48rem;
+  height: 0.48rem;
+}
+.login-wrapper .login .register-next .confirm .cancel {
+  left: 2.8rem;
+}
+.login-wrapper .login .login-btn {
+  margin-top: 0.8rem;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 0.3rem;
+  color: #fff;
+}
+.login-wrapper .login .account {
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.26rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+.login-wrapper .login .other .way {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+.login-wrapper .login .other .way .line-left,
+.login-wrapper .login .other .way .line-right {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.login-wrapper .login .other .way .text {
+  margin: 0 0.4rem 0 0.4rem;
+  font-size: 0.2rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+.login-wrapper .login .other .pic {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login-wrapper .login .other .pic img {
+  width: 0.96rem;
+  margin-right: 0.6rem;
+}
+.login-wrapper .login .agree {
+  margin-top: 0.3rem;
+  font-size: 0.26rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+}
+.login-wrapper .login .agree span a {
+  color: #4a90e2;
+}
+.login-wrapper .login .hidden {
+  display: none;
+}
+.login-wrapper .login .choice {
+  display: none;
+  width: 3rem;
+  height: 1rem;
+  line-height: 1rem;
+  border-radius: 0.2rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0.3rem;
+  color: #fff;
+  text-align: center;
+}
+.login-wrapper .login .notice {
+  position: absolute;
+  left: 0.6rem;
+  top: 3.6rem;
+  font-size: 0.26rem;
+  color: #f23030;
+}
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.6);
+}
+.mask .content {
+  width: 85%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mask .content .top h3 {
+  padding: 0.36rem 0 0.26rem 0;
+  font-size: 0.3rem;
+  text-align: center;
+  font-weight: normal;
+}
+.mask .content .top .text-main {
+  height: 4rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 0.4rem;
+}
+.mask .content .top .text-main p {
+  font-size: 0.28rem;
+  line-height: 1.6;
+}
+.mask .content .top .text-main p span {
+  text-decoration: underline;
+}
+.mask .content .top .text-main p a {
+  color: #000;
+  font-size: 0.28rem;
+}
+.mask .content .bottom {
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  font-size: 0.26rem;
+  margin-top: 0.2rem;
+  box-shadow: 0 -0.025rem 0.05rem 0 rgba(0, 0, 0, 0.1);
+}
+.mask .content .bottom .text p a {
+  color: #3b7adb;
+  text-decoration: underline;
+}
+.mask .content .btn-notice {
+  margin-top: 0.2rem;
+  font-size: 0.3rem;
+  display: flex;
+}
+.mask .content .btn-notice .disagree,
+.mask .content .btn-notice .agree-notice {
+  width: 50%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  color: #2e2d2d;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+.mask .content .btn-notice .agree-notice {
+  color: #fff;
+  background-image: linear-gradient(90deg, #f10000, #ff2000 73%, #ff4f18);
+}

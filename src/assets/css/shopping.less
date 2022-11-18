@@ -1,0 +1,591 @@
+ // 样式初始化
+ * {
+     padding: 0;
+     margin: 0;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ select,
+ input,
+ img {
+     vertical-align: middle;
+ }
+
+ ul,
+ ol {
+     list-style-type: none;
+ }
+
+ /*清除浮动*/
+ .clearfix:before,
+ .clearfix:after {
+     display: table;
+     content: ' ';
+ }
+
+ .clearfix:after {
+     clear: both;
+ }
+
+ /** *文本溢出点点点*/
+ .ellipsis {
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+ }
+
+ .ellipsis-2 {
+     display: -webkit-box;
+     overflow: hidden;
+     white-space: normal !important;
+     text-overflow: ellipsis;
+     word-wrap: break-word;
+     -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+ }
+
+ .ellipsis-3 {
+     display: -webkit-box;
+     overflow: hidden;
+     white-space: normal !important;
+     text-overflow: ellipsis;
+     word-wrap: break-word;
+     -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;
+ }
+
+ html {
+     font-size: calc(100vw / 7.2);
+ }
+
+ // 样式初始化
+
+ // 购物车
+ .shop-car-wrapper {
+     background-color: #f2f2f2;
+     // display: none;
+
+     .shop-car {
+         padding-bottom: 0.3rem;
+         box-sizing: border-box;
+
+         // 返回顶部区域
+         .back_top {
+             display: none;
+             position: fixed;
+             right: 0.4rem;
+             bottom: 1.4rem;
+             z-index: 111;
+             width: 0.7rem;
+             height: 0.7rem;
+             background: url(../img/index-img/top.png) no-repeat;
+             background-size: 0.7rem 0.7rem;
+         }
+
+         // 购物车顶部标题
+         .car-top {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             height: 1rem;
+             line-height: 1rem;
+             border-bottom: 1px solid #e5e5e5;
+             background-color: #fff;
+
+             .back {
+                 margin-left: 0.1rem;
+
+                 span {
+                     display: block;
+                     width: 0.4rem;
+                     height: 0.4rem;
+                     background: url(../img/details-img/left2.png) no-repeat;
+                     background-size: 0.4rem 0.4rem;
+                 }
+             }
+
+             .car-title {
+                 flex: 1;
+                 text-align: center;
+                 font-size: 0.34rem;
+                 color: 333;
+             }
+
+             .idot {
+                 margin-right: 0.4rem;
+
+                 span {
+                     display: inline-block;
+                     width: 0.4rem;
+                     height: 0.4rem;
+                     background: url(../img/details-img/0three\ .png) no-repeat 50%;
+                     background-size: 0.4rem;
+                 }
+             }
+         }
+
+         // 地址区域
+         .address {
+             background-color: #fff;
+             padding: 0.3rem;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+
+             i {
+                 display: inline-block;
+                 width: 0.4rem;
+                 height: 0.4rem;
+                 background: url(../img/car-img/icon_location_jd@2x.9ca2376c.png) no-repeat;
+                 background-size: 0.4rem 0.4rem;
+             }
+
+             .add {
+                 margin-left: 0.1rem;
+                 flex: 1;
+                 text-align: left;
+                 font-size: 0.24rem;
+                 color: #262626;
+             }
+
+             .edit {
+                 border-left: 1px solid #dedede;
+                 padding-left: 0.3rem;
+                 font-size: 0.24rem;
+                 color: #262626;
+             }
+         }
+
+         // 登录区域
+         .car-login {
+             background-color: #fff;
+             // margin: 0.3rem 0 0 0;
+             padding: 0.3rem 0;
+             font-size: 0.24rem;
+             color: #333;
+             text-align: center;
+             border-radius: 0 0 0.2rem 0.2rem;
+
+             span {
+                 margin-left: 0.1rem;
+                 display: inline-block;
+                 width: 1.2rem;
+                 height: 0.6rem;
+                 line-height: 0.6rem;
+                 border-radius: 0.3rem;
+                 text-align: center;
+                 color: #fff;
+                 background-image: linear-gradient(270deg, #f2270c, #ff4b2b);
+             }
+         }
+
+         // 满减区域
+         .count {
+             margin-top: 0.2rem;
+             padding: 0.2rem;
+             width: 100%;
+             height: 0.8rem;
+             box-sizing: border-box;
+             display: flex;
+             justify-content: flex-start;
+             align-items: center;
+             background-color: #fff;
+
+             p {
+                 font-size: 0.28rem;
+                 color: #000;
+
+                 &:nth-child(1) {
+                     color: #f0250f;
+                     margin-right: 0.6rem;
+                 }
+
+                 span {
+                     margin-left: 0.2rem;
+                 }
+             }
+         }
+
+         // 选择商品区域
+         .select {
+             // padding-bottom: 0.2rem;
+             margin-top: 0.2rem;
+             background-color: #fff;
+             border-radius: 0.2rem;
+
+             // 店铺名信息
+             .main-top {
+                 // padding: 0.2rem 0.3rem 0.3rem 0.3rem;
+                 box-sizing: border-box;
+                 font-size: 0;
+                 display: flex;
+                 align-items: center;
+
+                 .circle {
+                     margin: 0.2rem 0 0.2rem 0.3rem;
+                     display: inline-block;
+                     width: 0.6rem;
+                     height: 0.6rem;
+                     background: url(../img/car-img/icon_unselected_jd@2x.af34ea16.png) no-repeat;
+                     background-size: 0.6rem 0.6rem;
+                 }
+
+                 .house {
+                     margin: 0.2rem 0 0.2rem 0;
+                     margin-left: 0.2rem;
+                     display: inline-block;
+                     width: 0.3rem;
+                     height: 0.3rem;
+                     background: url(../img/car-img/icon_pop_jd@2x.1874077a.png) no-repeat;
+                     background-size: 0.3rem 0.3rem;
+                 }
+
+                 .arrow_right {
+                     display: inline-block;
+                     width: 0.2rem;
+                     height: 0.2rem;
+                     background: url(../img/car-img/icon_arrow_16@2x.284b96e3.png) no-repeat;
+                     background-size: 0.2rem 0.2rem;
+                 }
+
+                 span {
+                     margin: 0 0.1rem;
+                     font-size: 0.24rem;
+                     color: #333;
+                 }
+             }
+
+             // 加入购物车商品详细区域
+             .join-det {
+                 ul {
+                     li {
+                         margin-bottom: 0.3rem;
+                         padding: 0 0.3rem 0.2rem 0.3rem;
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: flex-start;
+
+                         .circle {
+                             transform: translateY(0.7rem);
+                             display: block;
+                             width: 0.6rem;
+                             height: 0.6rem;
+                             background: url(../img/car-img/icon_unselected_jd@2x.af34ea16.png) no-repeat;
+                             background-size: 0.6rem 0.6rem;
+                         }
+
+                         .pic {
+                             img {
+                                 margin: 0 0.3rem 0 0.1rem;
+                                 border-radius: 0.1rem;
+                                 width: 2rem;
+                             }
+                         }
+
+                         // 右侧文字内容区域
+                         .content {
+                             flex: 1;
+                             font-size: 0.22rem;
+                             color: #262626;
+
+                             // position: relative;
+                             .choice {
+                                //  width: 3.2rem;
+                                 margin: 0.14rem 0 0.14rem 0.06rem;
+                                 display: inline-block;
+                                 border-radius: 0.1rem;
+                                 padding: 0 0.3rem 0 0.1rem;
+                                 background: #f2f2f2;
+                                 position: relative;
+                                span {
+                                    display: inline-block;
+                                    width: 3rem;
+                                }
+                                 i {
+                                     position: absolute;
+                                     right: 0.1rem;
+                                     top: 50%;
+                                     transform: translateY(-50%);
+                                     display: inline-block;
+                                     width: 0.2rem;
+                                     height: 0.2rem;
+                                     background: url(../img/car-img/icon_arrow_12@2x.410c0417.png) no-repeat;
+                                     background-size: 0.2rem 0.2rem;
+                                 }
+                             }
+
+                             .jump {
+                                 margin: 0.16rem 0;
+                                 display: inline-block;
+                                 border-radius: 0.06rem;
+                                 color: #fa2c19;
+                                 border: 1px solid #fa2c19;
+
+                                 span {
+                                     &:nth-child(1) {
+                                         background-color: #fa2c19;
+                                         color: #fff;
+                                         border-radius: 0 0 0.1rem 0;
+                                     }
+                                 }
+
+                             }
+
+                             // 价格区域
+                             .pri {
+                                 display: flex;
+                                 justify-content: space-between;
+                                 align-items: center;
+
+                                 .num {
+                                     margin-top: 0.1rem;
+                                     font-size: 0.26rem;
+                                     color: #f2270c;
+
+                                     span {
+                                         font-size: 0.3rem;
+                                         font-weight: bold;
+                                     }
+                                 }
+
+                                 // 添加删除按钮
+                                 .add-del {
+
+                                     .del,
+                                     .add {
+                                         transform: translateY(0.06rem);
+                                         display: inline-block;
+                                         width: 0.3rem;
+                                         height: 0.3rem;
+                                         background: url(../img/car-img/icon_-_dis.1438c16b.png) no-repeat;
+                                         background-size: 0.3rem 0.3rem;
+                                     }
+
+                                     span {
+                                         display: inline-block;
+                                         width: 0.8rem;
+                                         line-height: 1.5;
+                                         text-align: center;
+                                         background-color: #f2f2f2;
+                                     }
+
+                                     .add {
+                                         background: url(../img/car-img/icon_+.648ea7b1.png) no-repeat;
+                                         background-size: 0.3rem 0.3rem;
+                                     }
+                                 }
+                             }
+
+                             // 删除
+                             .delete {
+                                 margin-top: 0.2rem;
+                                 font-size: 0.24rem;
+                                 color: #262626;
+                                 text-align: right;
+
+                                 span {
+                                     &:nth-child(1) {
+                                         padding-right: 0.2rem;
+                                         margin-right: 0.2rem;
+                                         border-right: 1px solid #dedede;
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+
+         // jd小图片区域
+         .jd-pic {
+             padding: 0 0.4rem 0.3rem 0.1rem;
+             margin-top: 0.2rem;
+
+             img {
+                 width: 100%;
+             }
+         }
+
+         // 可能你还想要
+         .maybe {
+             padding: 0 0.2rem;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+
+             .line-left,
+             .line-right {
+                 flex: 1;
+                 width: 100%;
+                 height: 1px;
+                 background-color: #ccc;
+             }
+
+             .may {
+                 margin: 0 0.2rem;
+                 font-size: 0.28rem;
+                 color: #999;
+             }
+         }
+
+         // 更多介绍区域
+         .more {
+             padding: 0 0.2rem;
+
+             ul {
+                 width: 100%;
+                 display: flex;
+                 flex-wrap: wrap;
+                 justify-content: space-between;
+                 align-items: center;
+
+                 li {
+                     padding-bottom: 0.2rem;
+                     border-radius: 0.3rem;
+                     background-color: #fff;
+                     margin-top: 0.2rem;
+                     width: 49%;
+
+                     .pic {
+                         img {
+                             width: 100%;
+                             border-radius: 0.3rem;
+                         }
+                     }
+
+                     &:nth-child(1) {
+                         margin-right: 0.1rem;
+                     }
+
+                     .text {
+                         padding: 0 0.1rem;
+
+                         p {
+                             margin-top: 0.2rem;
+                             // display: flex;
+                             font-size: 0;
+
+                             .hot {
+                                 margin-bottom: -0.4rem;
+                                 padding: 0 0.1rem;
+                                 display: block;
+                                 display: inline-block;
+                                 height: 0.4rem;
+                                 line-height: 0.4rem;
+                                 background-color: #f0250f;
+                                 color: #fff;
+                                 text-align: center;
+                                 font-size: 0.20rem;
+                                 border-radius: 0.2rem;
+                             }
+
+                             .introduce {
+                                 // flex: 1;
+                                 display: inline-block;
+                                 display: block;
+                                 font-size: 0.3rem;
+                                 color: #000;
+                                 text-indent: 0.8rem;
+                                 // text-align: center;
+                                 display: -webkit-box;
+                                 overflow: hidden;
+                                 white-space: normal !important;
+                                 text-overflow: ellipsis;
+                                 word-wrap: break-word;
+                                 -webkit-line-clamp: 2;
+                                 -webkit-box-orient: vertical;
+                             }
+                         }
+                     }
+
+                     .price {
+                         padding: 0 0.1rem;
+                         padding-top: 0.4rem;
+                         font-size: 0.26rem;
+                         color: #f23030;
+
+                         i {
+                             font-size: 0.24rem;
+                         }
+
+                         .poor {
+                             display: inline-block;
+                             font-size: 0.2rem;
+                             border: 1px solid #f23030;
+                             border-radius: 0.04rem;
+                         }
+                     }
+
+                     .nice {
+                         padding: 0 0.1rem;
+                         margin-top: 0.2rem;
+                         font-size: 0.26rem;
+                         color: #848689
+                     }
+                 }
+             }
+         }
+
+         // 底部固定区域
+         .footer-bar {
+             width: 100%;
+             box-sizing: border-box;
+             position: fixed;
+             bottom: 0;
+             left: 0;
+             padding: 0.1rem 0.3rem;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             background: hsla(0, 0%, 100%, .95);
+
+             i {
+                 display: inline-block;
+                 width: 0.6rem;
+                 height: 0.6rem;
+                 background: url(../img/car-img/icon_unselected_jd@2x.af34ea16.png) no-repeat;
+                 background-size: 0.6rem 0.6rem;
+             }
+
+             span {
+                 font-size: 0.26rem;
+                 color: #262626;
+             }
+
+             .total {
+                 flex: 1;
+                 margin-left: 1.7rem;
+                 font-size: 0.26rem;
+                 color: #262626;
+
+                 span {
+                     color: #000;
+                     font-weight: bold;
+                 }
+             }
+
+             .settlement {
+                 opacity: .3;
+                 display: inline-block;
+                 width: 2.2rem;
+                 height: 0.76rem;
+                 line-height: 0.8rem;
+                 border-radius: 0.3rem;
+                 text-align: center;
+                 background-color: #f2270c;
+                 background-image: linear-gradient(135deg, #f2140c, #f2270c 70%, #f24d0c);
+                 color: #fff;
+                 font-size: 0.26rem;
+
+                 span {
+                     color: #fff;
+                 }
+             }
+         }
+
+     }
+ }

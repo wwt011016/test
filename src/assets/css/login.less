@@ -1,0 +1,379 @@
+// 样式初始化
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+} 
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+html {
+    font-size: calc(100vw / 7.2);
+}
+
+// 样式初始化
+
+.current1 {
+    background-image: linear-gradient(90deg,#f10000,#ff2000 73%,#ff4f18);
+}
+.active1 {
+    background-image: linear-gradient(90deg, #fab3b3, #ffbcb3 73%, #ffcaba);
+}
+
+.text-color {
+    color: #e2231a;
+}
+
+.login-wrapper {
+    .back-rej {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 0;
+        padding: 0.2rem 0.4rem 0 0.4rem;
+        .pic {
+            margin-right: 1.8rem;
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            background: url(../img/login-img/left.png) no-repeat;
+            background-size: 0.4rem 0.4rem;
+        }
+        .rej {
+            font-size: 0.32rem;
+        }
+    }
+    .login {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.1rem 0.5rem 0 0.5rem;
+        
+        // top区域
+        .top {
+            // 输入手机号区域
+            .tel-phone {
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                // padding: 0.2rem 0;
+                // height: 1rem;
+                line-height: 1rem;
+                border-bottom: 1px solid #efefef;
+    
+                p {
+                    margin-left: 0.2rem;
+                    font-size: 0.3rem;
+                    color: #000;
+                }
+    
+                .down {
+                    display: inline-block;
+                    margin-left: 0.2rem;
+                    width: 0.32rem;
+                    height: 0.16rem;
+                    background: url(../img/login-img/down.png) no-repeat;
+                    background-size: 0.32rem 0.16rem;
+                }
+    
+                .ipt {
+                    width: 80%;
+                    position: relative;
+                    // height: 1rem;
+                    input {
+                        width: 100%;
+                        font-size: 0.3rem;
+                        width: 100%;
+                        margin-left: 0.2rem;
+                        border: 0;
+                        outline: 0;
+                        line-height: 1.2rem;
+                        // transform: translate(0.2rem,-0.3rem);
+                        &::placeholder {
+                            color: #848689;
+                        }
+                    }
+    
+                    .cancel {
+                        // display: none;
+                        opacity: 0;
+                        position: absolute;
+                        right: 0.2rem;
+                        top: 0;
+                        width: 0.24rem;
+                    }
+    
+                }
+            }
+    
+            // 验证码区域
+            .confirm {
+                margin-bottom: 0.4rem;
+                position: relative;
+                margin-top: 0.4rem;
+                display: flex;
+                justify-content: space-between;
+                height: 1rem;
+                line-height: 1rem;
+                border-bottom: 1px solid #efefef;
+    
+                input {
+                    font-size: 0.24rem;
+                    outline: 0;
+                    border: 0;
+    
+                    &::placeholder {
+                        font-size: 0.3rem;
+                        color: #848689;
+                    }
+                }
+    
+                .cancel {
+                    // display: none;
+                    opacity: 0;
+                    position: absolute;
+                    left: 3.3rem;
+                    top: 0.32rem;
+                    width: 0.24rem;
+                }
+    
+                .get {
+                    margin: 0.2rem 0.4rem 0 0;
+                    padding-left: 0.4rem;
+                    font-size: 0.3rem;
+                    color: #848689;
+                    height: 0.48rem;
+                    line-height: 0.48rem;
+                    border-left: 1px solid #ccc;
+                }
+            }
+        }
+    
+        // 注册用户区域
+        .register-next {
+            // display: none;
+            .tel-phone {
+                .ipt {
+                    width: 100%;
+    
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+    
+            .confirm {
+                position: relative;
+    
+                input {
+                    margin-left: 0.2rem;
+                }
+    
+                .eyes {
+                    position: absolute;
+                    left: 3.2rem;
+                    top: 0.2rem;
+                    width: 0.48rem;
+                    height: 0.48rem;
+                }
+    
+                .cancel {
+                    left: 2.8rem;
+                }
+            }
+        }
+    
+        // 登录区域
+        .login-btn {
+            margin-top: 0.8rem;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            font-size: 0.3rem;
+            color: #fff;
+            // background-image: linear-gradient(90deg, #fab3b3, #ffbcb3 73%, #ffcaba);
+        }
+    
+        // 切换登录区域
+        .account {
+            margin-top: 0.4rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.26rem;
+            color: rgba(0, 0, 0, .4);
+        }
+    
+        // 其他登录方式
+        .other {
+            .way {
+                margin-top: 1.6rem;
+                display: flex;
+                align-items: center;
+    
+                .line-left,
+                .line-right {
+                    flex: 1;
+                    height: 1px;
+    
+                    background-color: rgba(0, 0, 0, .2);
+                }
+    
+                .text {
+                    margin: 0 0.4rem 0 0.4rem;
+                    font-size: 0.2rem;
+                    color: rgba(0, 0, 0, .2);
+                }
+            }
+    
+            .pic {
+                margin-top: 0.5rem;
+                margin-left: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+    
+                img {
+                    width: 0.96rem;
+                    margin-right: 0.6rem;
+                }
+            }
+        }
+    
+        // 同意协议
+        .agree {
+            margin-top: 0.3rem;
+            font-size: 0.26rem;
+            text-align: center;
+            color: rgba(0, 0, 0, .4);
+    
+            span {
+                a {
+                    color: #4a90e2;
+                }
+            }
+        }
+    
+        .hidden {
+            display: none;
+        }
+    
+        .choice {
+            // display: none;
+            margin-top: 0.4rem;
+            width: 3rem;
+            height: 1rem;
+            line-height: 1rem;
+            border-radius: 0.2rem;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, .7);
+            font-size: 0.3rem;
+            color: #fff;
+            text-align: center;
+        }
+        .notice {
+            // opacity: 0;
+            position: absolute;
+            left: 0.6rem;
+            top: 3.6rem;
+            font-size: 0.26rem;
+            color: #f23030;
+        }
+    }
+}
+
+
+// 跳转注册页面蒙版区域
+.mask {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgba(0,0,0,.6);
+    .content {
+        width: 85%;
+        background-color: #fff;
+        border-radius: 0.2rem;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .top {
+            h3 {
+                padding: 0.36rem 0 0.26rem 0;
+                font-size: 0.3rem;
+                text-align: center;
+                font-weight: normal;
+            }
+            .text-main {
+                height: 4rem;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                padding: 0 0.4rem;               
+                p {
+                    font-size: 0.28rem;
+                    line-height: 1.6;
+                    span {
+                        text-decoration: underline;
+                    }
+                    a {
+                        color: #000;
+                        font-size: 0.28rem;
+                    }
+                }
+            }
+            
+        }
+
+        .bottom {
+            padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+            border-radius: 0.2rem;
+            font-size: 0.26rem;
+            margin-top: 0.2rem;
+            box-shadow: 0 -0.025rem 0.05rem 0 rgb(0 0 0 / 10%);
+            .text {
+                p {
+                    a {
+                        color: #3b7adb;
+                        text-decoration: underline;
+                    }
+                }
+            }           
+        }
+        .btn-notice {
+            margin-top: 0.2rem;
+            font-size: 0.3rem;
+            display: flex;
+            .disagree, .agree-notice{
+                width: 50%;
+                height: 0.9rem;
+                line-height: 0.9rem;
+                color: #2e2d2d;
+                border-top: 1px solid #eaeaea;
+                text-align: center;
+            }
+            .agree-notice {
+                color: #fff;
+                background-image: linear-gradient(90deg,#f10000,#ff2000 73%,#ff4f18);
+            }
+        }
+    }
+}
+
+

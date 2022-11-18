@@ -1,0 +1,479 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+select,
+input,
+img {
+  vertical-align: middle;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: ' ';
+}
+.clearfix:after {
+  clear: both;
+}
+/** *文本溢出点点点*/
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ellipsis-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+html {
+  font-size: calc(100vw / 7.2);
+}
+.account-wrapper .account {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  padding-bottom: 0.2rem;
+}
+.account-wrapper .account .account-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+.account-wrapper .account .account-top .account-back {
+  background-color: #fff;
+  margin-left: 0.1rem;
+}
+.account-wrapper .account .account-top .account-back span {
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(../img/details-img/left2.png) no-repeat;
+  background-size: 0.4rem 0.4rem;
+}
+.account-wrapper .account .account-top .account-title {
+  flex: 1;
+  text-align: center;
+  font-size: 0.3rem;
+  color: 333;
+  margin-right: 0.6rem;
+}
+.account-wrapper .account .address-account {
+  background-color: #fff;
+  padding: 0.2rem;
+  /* .wrap_all {
+                width: 100%;
+                height: 0.5rem;
+                line-height: 0rem;
+                select {
+                    border-radius: 0.16rem;
+                }
+            } */
+}
+.account-wrapper .account .address-account .province span {
+  font-size: 0.26rem;
+  color: #1a1a1a;
+}
+.account-wrapper .account .address-account .province span:nth-child(1) {
+  font-size: 0.24rem;
+  border-radius: 0.06rem;
+  margin-right: 0.1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #fa2c19 0%, #fa360c 45%, #fa510c 83%, #fa5c0c 100%);
+}
+.account-wrapper .account .address-account h2 {
+  position: relative;
+  margin: 0.2rem 0 0.2rem 0;
+  font-size: 0.34rem;
+}
+.account-wrapper .account .address-account h2 i {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  background: url(../img/car-img/icon_arrow_16@2x.284b96e3.png) no-repeat;
+  background-size: 0.3rem 0.3rem;
+}
+.account-wrapper .account .address-account .user-name {
+  font-size: 0.26rem;
+  color: #262626;
+}
+.account-wrapper .account .border {
+  background-color: #f2f2f2;
+}
+.account-wrapper .account .border .red-bor ul {
+  display: flex;
+  justify-content: space-between;
+}
+.account-wrapper .account .border .red-bor ul li {
+  width: 0.4rem;
+  height: 0.08rem;
+  margin-right: 0.06rem;
+  transform: skew(-30deg);
+  background: #ff7967;
+}
+.account-wrapper .account .border .red-bor ul li:nth-child(2n) {
+  background: #7ca8ff;
+}
+.account-wrapper .account .store-sum {
+  border-radius: 0.3rem;
+  background-color: #fff;
+  padding: 0.3rem;
+  margin-top: 0.3rem;
+}
+.account-wrapper .account .store-sum .title-sum {
+  font-size: 0;
+}
+.account-wrapper .account .store-sum .title-sum i {
+  transform: translateY(0.06rem);
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  background: url(../img/car-img/icon_pop_jd@2x.1874077a.png) no-repeat;
+  background-size: 0.3rem 0.3rem;
+}
+.account-wrapper .account .store-sum .title-sum span {
+  margin-left: 0.1rem;
+  font-size: 0.26rem;
+  color: #262626;
+}
+.account-wrapper .account .store-sum .main-store li {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #dedede;
+}
+.account-wrapper .account .store-sum .main-store li:nth-last-child(1) {
+  border: 0;
+}
+.account-wrapper .account .store-sum .main-store li .pic {
+  margin-top: 0.4rem;
+}
+.account-wrapper .account .store-sum .main-store li .pic img {
+  margin: 0.3rem 0 0.6rem 0;
+  width: 1.8rem;
+  border-radius: 0.2rem;
+}
+.account-wrapper .account .store-sum .main-store li .main-text {
+  margin-top: 0.4rem;
+  margin-left: 0.2rem;
+  width: 70%;
+}
+.account-wrapper .account .store-sum .main-store li .main-text p:nth-child(1) {
+  margin-bottom: 0.1rem;
+  font-size: 0.28rem;
+  color: #000;
+}
+.account-wrapper .account .store-sum .main-store li .main-text p:nth-child(2) {
+  font-size: 0.26rem;
+  color: gray;
+}
+.account-wrapper .account .store-sum .main-store li .main-text .price {
+  margin: 0.2rem 0;
+}
+.account-wrapper .account .store-sum .main-store li .main-text .price p {
+  font-size: 0.26rem;
+  color: #fa2c19;
+}
+.account-wrapper .account .store-sum .main-store li .main-text .price p span {
+  font-size: 0.3rem;
+  color: #fa2c19;
+  font-weight: bold;
+}
+.account-wrapper .account .store-sum .main-store li .main-text .price p span:nth-child(3) {
+  color: #808080;
+  font-weight: normal;
+  margin-left: 1.4rem;
+  font-size: 0.24rem;
+}
+.account-wrapper .account .store-sum .main-store li .main-text .price p i {
+  margin-left: 0.1rem;
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../img/car-img/i.png) no-repeat;
+  background-size: 0.2rem 0.2rem;
+}
+.account-wrapper .account .store-sum .main-store li .main-text .jump-del ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.account-wrapper .account .store-sum .main-store li .main-text .jump-del ul li {
+  margin-bottom: 0.1rem;
+  font-size: 0.24rem;
+  border-radius: 0.06rem;
+  margin-right: 0.1rem;
+  color: #fa2c19;
+  border: 0.04267rem solid rgba(250, 44, 25, 0.5);
+}
+.account-wrapper .account .store-sum .service-goods .send .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-wrapper .account .store-sum .service-goods .send .top p {
+  color: #1A1A1A;
+  font-size: 0.26rem;
+}
+.account-wrapper .account .store-sum .service-goods .send .top .mid {
+  margin-left: 1.6rem;
+}
+.account-wrapper .account .store-sum .service-goods .send .top .mid p {
+  text-align: right;
+}
+.account-wrapper .account .store-sum .service-goods .send .top i {
+  transform: translateY(-0.18rem);
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../img/car-img/icon_arrow_16@2x.284b96e3.png) no-repeat;
+  background-size: 0.2rem 0.2rem;
+}
+.account-wrapper .account .store-sum .service-goods .send .bottom {
+  margin: 0.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-wrapper .account .store-sum .service-goods .send .bottom .dd {
+  margin-right: 3.2rem;
+}
+.account-wrapper .account .store-sum .service-goods .send .bottom span {
+  color: #1A1A1A;
+  font-size: 0.26rem;
+}
+.account-wrapper .account .store-sum .service-goods .send .bottom i {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../img/car-img/icon_arrow_16@2x.284b96e3.png) no-repeat;
+  background-size: 0.2rem 0.2rem;
+}
+.account-wrapper .account .store-sum .service-goods .refund {
+  font-size: 0.26rem;
+  color: #1A1A1A;
+}
+.account-wrapper .account .store-sum .service-goods .refund .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-wrapper .account .store-sum .service-goods .refund .top i {
+  margin-right: 4rem;
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../img/car-img/i.png) no-repeat;
+  background-size: 0.2rem 0.2rem;
+}
+.account-wrapper .account .store-sum .service-goods .refund .mid {
+  margin: 0.3rem 0;
+  text-align: right;
+}
+.account-wrapper .account .store-sum .service-goods .refund .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-wrapper .account .store-sum .service-goods .refund .bottom span:nth-child(2) {
+  color: #999;
+}
+.account-wrapper .account .money-goods {
+  background-color: #fff;
+  margin-top: 0.2rem;
+  border-radius: 0.2rem;
+}
+.account-wrapper .account .money-goods .other ul {
+  padding: 0.3rem 0.3rem 0 0.3rem;
+}
+.account-wrapper .account .money-goods .other ul li {
+  margin-bottom: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.26rem;
+}
+.account-wrapper .account .money-goods .other ul li .goods {
+  color: #1A1A1A;
+}
+.account-wrapper .account .money-goods .other ul li .price {
+  color: #262626;
+}
+.account-wrapper .account .money-goods .other ul li:nth-last-child(1) {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #dedede;
+}
+.account-wrapper .account .money-goods .other ul .esc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-wrapper .account .money-goods .other ul .esc .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.account-wrapper .account .money-goods .other ul .esc .left .bo {
+  margin-left: 0.1rem;
+  border-radius: 0.06rem;
+  color: #fa2c19;
+  border: 1px solid rgba(250, 44, 25, 0.5);
+}
+.account-wrapper .account .money-goods .other ul .esc .price {
+  color: #fa2c19;
+}
+.account-wrapper .account .money-goods .other ul .esc .price i {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../img/car-img/icon_arrow_16@2x.284b96e3.png) no-repeat;
+  background-size: 0.2rem 0.2rem;
+}
+.account-wrapper .account .money-goods .other ul .choice .price .get {
+  color: #1A1A1A;
+}
+.account-wrapper .account .money-goods .other ul .choice .price .und {
+  color: #808080;
+}
+.account-wrapper .account .money-goods .other .add-sum {
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 0.3rem 0.3rem 0.3rem;
+  text-align: right;
+  font-size: 0.26rem;
+  color: #262626;
+}
+.account-wrapper .account .money-goods .other .add-sum p {
+  color: #fa2c19;
+  font-size: 0.24rem;
+}
+.account-wrapper .account .money-goods .other .add-sum p span {
+  font-size: 0.3rem;
+  font-weight: bold;
+}
+.account-wrapper .account .invoice {
+  padding: 0.3rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.2rem;
+}
+.account-wrapper .account .invoice span {
+  font-size: 0.28rem;
+  color: #1A1A1A;
+}
+.account-wrapper .account .invoice .right {
+  font-size: 0;
+}
+.account-wrapper .account .invoice .right i {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../img/car-img/icon_arrow_16@2x.284b96e3.png) no-repeat;
+  background-size: 0.2rem 0.2rem;
+}
+.account-wrapper .account .bot-bar {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  padding: 0.1rem 0.2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.account-wrapper .account .bot-bar .bot-price {
+  font-size: 0.28rem;
+  color: #fa2c19;
+}
+.account-wrapper .account .bot-bar .bot-price span {
+  font-size: 0.4rem;
+  font-weight: bold;
+}
+.account-wrapper .account .bot-bar .inline {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.18rem 0.46rem;
+  background: linear-gradient(135deg, #fa2c19 0, #fa3f19 45%, #fa5919 83%, #fa6419 100%);
+  border: 0;
+  border-radius: 0.4rem;
+  font-size: 0.26rem;
+}
+.mask_pay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 991;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.mask_pay .content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 0.4rem;
+  box-sizing: border-box;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+}
+.mask_pay .content h2 {
+  font-size: 0.4rem;
+  text-align: center;
+  margin: 0 0.4rem 0.4rem 0.4rem;
+}
+.mask_pay .content .btn {
+  margin-top: 0.8rem;
+  padding: 0 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mask_pay .content .btn .cancle,
+.mask_pay .content .btn .confirm {
+  width: 1.2rem;
+  padding: 0.2rem 0.6rem;
+  background: #fff;
+  border: 1px solid #fa2c19;
+  border-radius: 0.4rem;
+  color: #fa2c19;
+  font-size: 0.28rem;
+}
+.mask_pay .content .btn .confirm {
+  color: #fff;
+  background: linear-gradient(135deg, #fa2c19, #fa3f19 44.59259%, #fa5919 83.40741%, #fa6419);
+}
