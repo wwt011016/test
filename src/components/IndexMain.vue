@@ -2,7 +2,13 @@
   <div>
     <!-- 轮播图区域开始 -->
     <div class="box">
-      <IndexSwiper></IndexSwiper>
+      <IndexSwiper @into_detail="into_details">
+          <!-- <template v-slot:default="img">
+            <div >
+               <img :src="require(`../assets/${img.img.img}`)">
+            </div>
+          </template> -->
+      </IndexSwiper>
     </div>
     <!-- 轮播图区域结束 -->
 
@@ -144,22 +150,32 @@
       </div>
     </div>
     <!-- 图片区域结束 -->
-     
+
   </div>
 
 </template>
 
 <script>
-import IndexSwiper from '../components/IndexSwiper';
+import IndexSwiper from '../components/IndexSwiper'
 export default {
   name: 'IndexMain',
   data() {
     return {}
   },
   components: { IndexSwiper },
-  methods: {},
+  methods: {
+    into_details(val) {
+      this.$router.replace({
+        path: '/details',
+        query: {
+          val: val,
+        },
+      })
+    },
+  },
   created() {},
-  mounted() {},
+  mounted() {
+  },
 }
 </script>
 

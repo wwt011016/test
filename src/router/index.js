@@ -9,10 +9,12 @@ const routes = [
     path: "/",
     redirect: "/index/beauty",
   },
+  // 首页路由
   {
     path: "/index",
     component: () => import("../components/IndexVue"),
     redirect: "/index/beauty",
+    // 首页里的子路由
     children: [
       //商品
       {
@@ -65,6 +67,21 @@ const routes = [
     component: () => import("../components/SuccessVue"),
     meta: true,
   },
+  // 分类路由
+  {
+    path: "/classfiy",
+    component: () => import("../components/ClassifShow"),
+  },
+  // 详情页路由
+  {
+    path: "/details",
+    component: () => import("../components/DetailsVue"),
+  },
+  // 购物车页面路由
+  {
+    path:'/shopping',
+    component:()=>import('../components/ShoppingCar')
+  }
 ];
 
 const router = new VueRouter({

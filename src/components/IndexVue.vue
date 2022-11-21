@@ -128,7 +128,7 @@
       </ul>
     </div>
     <!-- 推荐区域结束 -->
-
+    <!-- <MoreGoods></MoreGoods> -->
     <!-- 更多介绍区域开始 -->
     <div :class="more_type ? 'more' : 'more2'">
       <ul>
@@ -159,7 +159,6 @@
           </div>
         </li>
       </ul>
-
     </div>
     <!-- 更多介绍区域结束 -->
 
@@ -196,24 +195,30 @@
       <ul class="list">
         <li class="index">
           <img src="../assets/img/index-img/index.png"
-               alt="" ref="img1">
+               alt=""
+               ref="img1">
           <p @click="beauty(1)">
-            <router-link to="/index/beauty" :class="count_num === 1 ? 'current' : ''">首页</router-link>
+            <router-link to="/index/beauty"
+                         :class="count_num === 1 ? 'current' : ''">首页</router-link>
           </p>
         </li>
         <li class="all">
           <img src="../assets/img/index-img/shopping.png"
-               alt="" ref="img2">
+               alt=""
+               ref="img2">
           <p @click="all_goods(2)">
-            <router-link to="/index/goods" :class="count_num === 2 ? 'current' : ''">全部商品</router-link>
+            <router-link to="/index/goods"
+                         :class="count_num === 2 ? 'current' : ''">全部商品</router-link>
           </p>
         </li>
         <li class="classf3"
             @click="classfiy(3)">
           <img src="../assets/img/index-img/classification.png"
-               alt="" ref="img3">
+               alt=""
+               ref="img3">
           <p>
-            <router-link to="/index/classfiy" :class="count_num === 3 ? 'current' : ''">商品分类</router-link>
+            <router-link to="/index/classfiy"
+                         :class="count_num === 3 ? 'current' : ''">商品分类</router-link>
           </p>
         </li>
         <li class="my_order">
@@ -238,6 +243,8 @@
 <script>
 import axios from 'axios'
 import '../assets/css/index.less'
+import { get_moreinfo } from '../minix'
+// import MoreGoods from '../components/MoreGoods.vue'
 export default {
   data() {
     return {
@@ -251,19 +258,21 @@ export default {
       more_type: true,
       bottom_border1: true,
       bottom_border2: false,
-      count_num : 1
+      count_num: 1,
     }
   },
+  // components:{MoreGoods},
+  mixins: [get_moreinfo],
   methods: {
     // 获取更多区域中的所有信息
-    get_moreinfo() {
-      axios({
-        method: 'get',
-        url: 'http://localhost:3001/get_moreinfo',
-      }).then((data) => {
-        this.moreData = data.data
-      })
-    },
+    // get_moreinfo() {
+    //   axios({
+    //     method: 'get',
+    //     url: 'http://localhost:3001/get_moreinfo',
+    //   }).then((data) => {
+    //     this.moreData = data.data
+    //   })
+    // },
     // 推荐等点击事件
     sendinfo(e) {
       this.isActive = e.target.id
@@ -285,7 +294,8 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop
       //计算绑定div位置
-      var navs_top = document.querySelector('.index_wrapper .nav').offsetTop
+      var navs = document.querySelector('.index_wrapper .nav')
+      let navs_top = navs.offsetTop
       //进行比较设置位置fixed
       this.whether = scrollTop > navs_top
       if (this.whether) {
@@ -307,26 +317,26 @@ export default {
       this.bottom_border1 = true
       this.bottom_border2 = false
       this.count_num = 1
-      this.$refs.img1.src =require('../assets/img/index-img/index.png')
-      this.$refs.img2.src =require('../assets/img/index-img/shopping.png')
-      this.$refs.img3.src =require('../assets/img/index-img/classification.png')
+      this.$refs.img1.src = require('../assets/img/index-img/index.png')
+      this.$refs.img2.src = require('../assets/img/index-img/shopping.png')
+      this.$refs.img3.src = require('../assets/img/index-img/classification.png')
     },
     // 底部全部商品点击事件
     all_goods() {
       this.nav_show = true
       this.count_num = 2
-      this.$refs.img1.src =require('../assets/img/index-img/hone.png')
-      this.$refs.img2.src =require('../assets/img/index-img/shoppping2.png')
-      this.$refs.img3.src =require('../assets/img/index-img/classification.png')
+      this.$refs.img1.src = require('../assets/img/index-img/hone.png')
+      this.$refs.img2.src = require('../assets/img/index-img/shoppping2.png')
+      this.$refs.img3.src = require('../assets/img/index-img/classification.png')
     },
     // 底部分类点击事件
     classfiy() {
       this.advice_show = false
       this.nav_show = false
       this.count_num = 3
-      this.$refs.img1.src =require('../assets/img/index-img/hone.png')
-      this.$refs.img2.src =require('../assets/img/index-img/shopping.png')
-      this.$refs.img3.src =require('../assets/img/index-img/classf2.png')
+      this.$refs.img1.src = require('../assets/img/index-img/hone.png')
+      this.$refs.img2.src = require('../assets/img/index-img/shopping.png')
+      this.$refs.img3.src = require('../assets/img/index-img/classf2.png')
     },
     // 顶部点击家具事件
     festival() {
@@ -341,7 +351,6 @@ export default {
     },
     // 点击切换布局样式
     change_type() {
-      console.log(1111)
       this.more_type = !this.more_type
     },
   },
@@ -350,6 +359,13 @@ export default {
     // 进入之后获取更多区域中所有信息
     this.get_moreinfo()
     window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    // 取消监听
+    window.removeEventListener('scroll',this.handleScroll)
+  },
+  destroyed() {
+    console.log('destroyed')
   },
 }
 </script>

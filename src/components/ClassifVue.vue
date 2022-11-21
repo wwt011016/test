@@ -3,49 +3,11 @@
     <!-- 商品分类多余区域开始-->
     <div class="classf">
       <ul class="class-list">
-        <li>
+        <li v-for="(item,index) in classf"
+            :key="index"
+            @click="to_classfy(item)">
           <i class="bar"></i>
-          <span>全部宝贝</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>沙发系列</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>储物柜系列</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>书桌系列</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>电视柜系列</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>餐桌系列</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>餐边柜系列</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>梳妆台系列</span>
-          <i class="to-right"></i>
-        </li>
-        <li>
-          <i class="bar"></i>
-          <span>休闲椅系列</span>
+          <span>{{item}}</span>
           <i class="to-right"></i>
         </li>
       </ul>
@@ -60,15 +22,85 @@
 </template>
 
 <script>
+import '../assets/css/index.less'
 export default {
   name: 'ClassfVue',
   data() {
-    return {}
+    return {
+      classf: [
+        '全部宝贝',
+        '沙发系列',
+        '储物柜系列',
+        '书桌系列',
+        '电视柜系列',
+        '餐桌系列',
+        '梳妆台系列',
+        '休闲椅系列',
+      ],
+    }
   },
-  methods: {},
+  methods: {
+    to_classfy(val) {
+      if (val !== null && val !== '') {
+        localStorage.setItem('classfiy_type', val)
+      }
+      this.$router.replace({
+        path: '/classfiy',
+      })
+    },
+  },
   created() {},
   mounted() {},
 }
 </script>
 
-<style lang='stylus' scoped></style>
+<style lang='less' scoped>
+.index_wrapper {
+  .nav {
+    .list-3 {
+      ul {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+.cla_hid {
+  box-sizing: border-box;
+  padding: 0 0.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+  h2 {
+    color: #000;
+    font-size: 0.3rem;
+  }
+  .idot {
+    span {
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: url(../assets/img/details-img/0three\ .png) no-repeat 50%;
+      background-size: 0.4rem;
+    }
+  }
+  .back {
+    span {
+      display: block;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: url(../assets/img/details-img/left2.png) no-repeat;
+      background-size: 0.4rem 0.4rem;
+    }
+  }
+}
+</style>

@@ -54,7 +54,6 @@ window.onload = function () {
         var adds = document.querySelectorAll('.select .join-det .pri .add-del .add')
         for (let u = 0; u < adds.length; u++) {
             adds[u].addEventListener('click', function () {
-
                 // 点击加号增加数量 axios
                 const car_id = this.parentNode.children[0].id
                 axios({
@@ -87,7 +86,6 @@ window.onload = function () {
         var dels = document.querySelectorAll('.select .join-det .pri .add-del .del')
         for (let u = 0; u < dels.length; u++) {
             dels[u].addEventListener('click', function () {
-
                 // 点击减号减少数量 axios
                 const car_id = this.id
                 axios({
